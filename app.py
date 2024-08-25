@@ -30,7 +30,7 @@ if st.button('Submit'):
     if input_text:
         try:
             # Load the dataset in chunks
-            chunk_size = 1000  # Adjust based on your RAM constraints
+            chunk_size = 500  # Reduce chunk size if memory issues occur
             df_iterator = pd.read_csv(CSV_FILE_PATH, chunksize=chunk_size)
 
             # Load a smaller model for generating embeddings
