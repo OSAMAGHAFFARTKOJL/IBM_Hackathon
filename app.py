@@ -29,7 +29,7 @@ if csv_file is not None and input_text:
 
     # Load the dataset in chunks
     chunk_size = 1000  # Adjust based on your RAM constraints
-    df_iterator = pd.read_csv('/content/The Quran Dataset.csv', chunksize=chunk_size)
+    df_iterator = pd.read_csv('The Quran Dataset.csv', chunksize=chunk_size)
 
     # Load a smaller model for generating embeddings
     embedder = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
